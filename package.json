@@ -1,0 +1,37 @@
+{
+  "name": "beatific",
+  "version": "1.0.0",
+  "description": "No need to install mongoose, bcrypt, jsonwebtoken, helmet, compression, morgan. This library does every functionality of them for you. \n And it can generate dockerfile for project as well.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha ./tests/test --recursive --timeout 15000 --no-deprecation"
+  },
+  "author": "Yashvardhan Kukreja",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.4",
+    "compression": "^1.7.4",
+    "helmet": "^3.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.7",
+    "morgan": "^1.9.1"
+  },
+  "keywords": [
+    "jwt",
+    "jsonwebtoken",
+    "backend",
+    "bcrypt",
+    "npm",
+    "docker",
+    "helmet",
+    "compression",
+    "mongo",
+    "mongoose"
+  ],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "should": "^13.2.3"
+  }
+}
