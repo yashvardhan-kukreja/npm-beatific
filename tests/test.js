@@ -2,8 +2,6 @@ const chai = require("chai");
 const app = require("../app");
 const should = chai.should();
 
-app.generateJWT("Hello", "somethig").then(token => console.log(token)).catch(err => console.log(err));
-
 describe("----------- Enter the tests ----------", () => {
 
     let current_token;
