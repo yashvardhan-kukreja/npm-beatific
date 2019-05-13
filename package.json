@@ -17,6 +17,10 @@
     "mongoose": "^5.5.7",
     "morgan": "^1.9.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashvardhan-kukreja/npm-beatific.git"
+  },
   "keywords": [
     "jwt",
     "jsonwebtoken",
