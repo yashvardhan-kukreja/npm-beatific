@@ -1,5 +1,6 @@
 # Beatific
 
+[![Build Status](https://travis-ci.com/yashvardhan-kukreja/npm-beatific.svg?token=xkGWiw62FsqB4JqveXu3&branch=master)](https://travis-ci.com/yashvardhan-kukreja/npm-beatific)
 
 ### A single npm package which satisfies the need for the following packages:
 
