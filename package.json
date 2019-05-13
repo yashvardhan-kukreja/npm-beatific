@@ -1,6 +1,6 @@
 {
   "name": "beatific",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "No need to install mongoose, bcrypt, jsonwebtoken, helmet, compression, morgan. This library does every functionality of them for you. \n And it can generate dockerfile for project as well.",
   "main": "app.js",
   "scripts": {
