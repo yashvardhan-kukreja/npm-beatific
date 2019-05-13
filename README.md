@@ -52,7 +52,7 @@ beatific.mongoConnect(dbURI)
  Parameters: data, secret, expiresIn (optional)
 
  ```js
- beatific.generateJWT({message: "Hey there"}, 'something_secret', {expiresIn: '4d'})
+ beatific.generateJWT({message: "Hey there"}, 'something_secret', '4d')
  .then(token => console.log("Here's the token " + token))
     .catch(err => console.error("Some problem occurred"));
  ```
