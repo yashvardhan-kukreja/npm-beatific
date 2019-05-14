@@ -10,7 +10,7 @@ module.exports.mongoConnect = (dbUri) => {
     });
 }
 
-module.exports.mongoModelGen = (schema, schemaName, collectionName) => {
+module.exports.mongoModelGen = (schemaName, schema, collectionName) => {
     return new Promise((resolve, reject) => {
         if (schema == null || schemaName == null || schemaName == "") {
             reject(new Error("null value found for schema or schema name"));
