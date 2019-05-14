@@ -1,0 +1,15 @@
+version: '3'
+services:
+  node:
+    build: .
+    links: 
+     - mongo
+    volumes: 
+     - /app/node_modules
+     - ./:/app
+  mongo:
+    image: 
+      mvertes/alpine-mongo
+    expose:
+     - 27017
+    
