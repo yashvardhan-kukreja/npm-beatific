@@ -2,15 +2,27 @@ const chai = require("chai");
 const app = require("../app");
 const should = chai.should();
 
-describe("----------- Enter the tests ----------", () => {
+describe("----------- Enter the tests ----------\n", () => {
 
     let current_token;
     let current_hash;
 
     it("should connect to MongoDB", (done) => {
-        app.mongoConnect("mongodb://mongo:27017/test")
+        app.mongoConnect("mongodb://sample:sample123@ds135421.mlab.com:35421/quotegen")
             .then(data => {
                 data.should.be.a("object");
+                done();
+            })
+            .catch(err => {
+                done(err);
+                process.exit(1);
+            });
+    });
+
+    it("should generate a mongoose model", (done) => {
+        app.mongoModelGen('User', schema, "users")
+            .then(model => {
+                model.should.be.a("object");
                 done();
             })
             .catch(err => {
@@ -31,7 +43,6 @@ describe("----------- Enter the tests ----------", () => {
                 done();
             })
             .catch(err => {
-                console.error(err);
                 done(err);
                 process.exit(1);
             });
