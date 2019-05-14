@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build . -t yash1300/beatific
+  - docker-compose build
 
 script:
-  - docker run yash1300/beatific
+  - docker-compose up
