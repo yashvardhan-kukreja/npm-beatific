@@ -34,15 +34,65 @@ var beatific = require("beatific");
 <br>
 
 
-### Connect to a MongoDB:
-Parameters: MongoDB URI
+### MongoDB/Mongoose Functionality:
+
+ - Connect to a MongoDB 
+
+ Parameters: MongoDB URI
 
 ```js
 beatific.mongoConnect(dbURI)
 .then(db => console.log("Connected to the DB..."))
     .catch(err => console.error("Error connecting to the DB!"));
 ```
-<br>
+
+ - Create a mongo schema and automatically generate a mongoose.model for it
+
+ Parameters: Schema name, schema object, db collection name (optional)
+
+ ```js
+
+ let userSchema = {
+    name: {
+       type: String,
+       required: true
+    },
+    email: {
+       type: String,
+       required: true,
+       unique: true
+    }
+ };
+
+ beatific.mongoModelGen('User', userSchema, "users")
+ .then(model => console.log("mongoose.model generated for user schema"))
+      .catch(err => console.error("Some problem occurred"));
+ ```
+
+ What this does behind the scenes
+
+ ```js
+
+const mongoose = require("mongoose");
+
+let userSchema = {
+    name: {
+       type: String,
+       required: true
+    },
+    email: {
+       type: String,
+       required: true,
+       unique: true
+    }
+ };
+
+ let schema = new mongoose.schema(userSchema);
+
+ return mongoose.model('User', schema, "users");
+
+ ```
+ <br>
 
 
 ### JWT functionality:
