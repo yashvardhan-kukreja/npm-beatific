@@ -7,6 +7,18 @@ describe("----------- Enter the tests ----------", () => {
     let current_token;
     let current_hash;
 
+    it("should connect to MongoDB", (done) => {
+        app.mongoConnect("mongodb://mongo:27017/test")
+            .then(data => {
+                data.should.be.a("object");
+                done();
+            })
+            .catch(err => {
+                done(err);
+                process.exit(1);
+            });
+    });
+
     it("should generate JWT", (done) => {
         let data = "Hello, World!";
         let secret = "14321sdldsd1234321";
