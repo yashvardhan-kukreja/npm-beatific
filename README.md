@@ -3,11 +3,12 @@
 [![Build Status](https://travis-ci.com/yashvardhan-kukreja/npm-beatific.svg?token=xkGWiw62FsqB4JqveXu3&branch=master)](https://travis-ci.com/yashvardhan-kukreja/npm-beatific)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://www.github.com/yashvardhan-kukreja/npm-beatific//edit/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+![npm](https://img.shields.io/npm/dw/beatific.svg)
 
 
 ### A single npm package which satisfies the need for the following packages:
 
- - **mongoose** => For establishing connection to your MongoDB.
+ - **mongoose** => For establishing connection to your MongoDB and producing mongoose models.
  - **bcryptjs** => For hashing and verifying hashes.
  - **helmet** => For securing Express apps by setting various http headers.
  - **compression** => For the compression of route propagation.
