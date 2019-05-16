@@ -19,17 +19,16 @@
 
  -------------
 
- ## Usage:
-
-### Installation:
+## Installation
 
 ```js
 npm install --save beatific
 ```
 <br>
 
+## Usage
 
-### API:
+### API
 
 ```js
 var beatific = require("beatific");
@@ -41,7 +40,7 @@ var beatific = require("beatific");
 
  - Connect to a MongoDB 
 
- Parameters: MongoDB URI
+ > `Parameters: MongoDB URI
 
 ```js
 beatific.mongoConnect(dbURI)
@@ -98,11 +97,11 @@ let userSchema = {
  <br>
 
 
-### JWT functionality:
+### JWT functionality
 
  - Signing/Generating the token:
 
- Parameters: data, secret, expiresIn (optional)
+ > `Parameters: data, secret, expiresIn (optional)`
 
  ```js
  beatific.generateJWT({message: "Hey there"}, 'something_secret', '4d')
@@ -113,7 +112,7 @@ let userSchema = {
 
  - Verifying/Decoding the token:
 
- Parameters: token, secret
+ `Parameters: token, secret`
 
  ```js
   beatific.decodeJWT('my_token_1234321', 'something_secret')
@@ -122,11 +121,11 @@ let userSchema = {
  ```
  <br>
 
-### Bcrypt Functionality:
+### Bcrypt Functionality
 
  - Hashing some data:
 
-Parameters: data, salt rounds (default=10)
+> `Parameters: data, salt rounds (default=10)`
 
 ```js
 beatific.hashGen("hey there", 8)
@@ -137,7 +136,7 @@ beatific.hashGen("hey there", 8)
 
  - Verifying/Comparing some data and corresponding hash:
 
- Parameters: hashed data, inputData
+ > `Parameters: hashed data, inputData`
 
  ```js
  beatific.hashCheck("$adfdsf23243546524", "my password may be")
@@ -147,7 +146,7 @@ beatific.hashGen("hey there", 8)
  <br>
 
 ### Use logger
-Parameters: loggerType (default = "dev")
+> Parameters: `loggerType (default = "dev")`
 
 ```js
 //In your main .js file
@@ -160,7 +159,7 @@ app.use(beatific.logger(loggerType));
 <br>
 
 
-### Use helmet:
+### Use helmet
 
 ```js
 // In your main .js file
@@ -171,7 +170,7 @@ app.use(beatific.helmet());
 <br>
 
 
-### Use compression:
+### Use compression
 
 ```js
 // In your main .js file
@@ -185,7 +184,7 @@ app.use(beatific.compression());
 
 ### Generate Dockerfile for the project
 
-Parameters: dockerfile_name (default="dockerfile"), portNumber, startCommand (default="npm start")
+> Parameters: `dockerfile_name (default="dockerfile"), portNumber, startCommand (default="npm start")`
 
 Just run this once in your main .js file:
 
