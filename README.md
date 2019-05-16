@@ -34,7 +34,7 @@ var beatific = require("beatific");
 
 
 ### Connect to a MongoDB
-Parameters: MongoDB URI
+> `Parameters: MongoDB URI`
 
 ```js
 beatific.mongoConnect(dbURI)
@@ -48,7 +48,7 @@ beatific.mongoConnect(dbURI)
 
  - Signing/Generating the token:
 
- Parameters: data, secret, expiresIn (optional)
+ > `Parameters: data, secret, expiresIn (optional)`
 
  ```js
  beatific.generateJWT({message: "Hey there"}, 'something_secret', '4d')
@@ -59,7 +59,7 @@ beatific.mongoConnect(dbURI)
 
  - Verifying/Decoding the token:
 
- Parameters: token, secret
+ `Parameters: token, secret`
 
  ```js
   beatific.decodeJWT('my_token_1234321', 'something_secret')
@@ -72,7 +72,7 @@ beatific.mongoConnect(dbURI)
 
  - Hashing some data:
 
-Parameters: data, salt rounds (default=10)
+> `Parameters: data, salt rounds (default=10)`
 
 ```js
 beatific.hashGen("hey there", 8)
@@ -83,7 +83,7 @@ beatific.hashGen("hey there", 8)
 
  - Verifying/Comparing some data and corresponding hash:
 
- Parameters: hashed data, inputData
+ > `Parameters: hashed data, inputData`
 
  ```js
  beatific.hashCheck("$adfdsf23243546524", "my password may be")
@@ -93,7 +93,7 @@ beatific.hashGen("hey there", 8)
  <br>
 
 ### Use logger
-Parameters: loggerType (default = "dev")
+> Parameters: `loggerType (default = "dev")`
 
 ```js
 //In your main .js file
