@@ -2,6 +2,8 @@
 [![npm version](https://badge.fury.io/js/beatific.svg)](https://badge.fury.io/js/beatific)
 [![Build Status](https://travis-ci.com/yashvardhan-kukreja/npm-beatific.svg?token=xkGWiw62FsqB4JqveXu3&branch=master)](https://travis-ci.com/yashvardhan-kukreja/npm-beatific)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://www.github.com/yashvardhan-kukreja/npm-beatific//edit/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 
 ### A single npm package which satisfies the need for the following packages:
 
