@@ -163,7 +163,7 @@ app.use(beatific.logger(loggerType));
 // In your main .js file
 var app = express();
 
-app.use(beatific.compression());
+app.use(beatific.helmet());
 ```
 <br>
 
