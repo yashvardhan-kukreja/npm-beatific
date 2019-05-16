@@ -40,7 +40,7 @@ var beatific = require("beatific");
 
  - Connect to a MongoDB 
 
- > `Parameters: MongoDB URI
+ > `Parameters: MongoDB URI`
 
 ```js
 beatific.mongoConnect(dbURI)
@@ -50,7 +50,7 @@ beatific.mongoConnect(dbURI)
 
  - Create a mongo schema and automatically generate a mongoose.model for it
 
- Parameters: Schema name, schema object, db collection name (optional)
+ > `Parameters: Schema name, schema object, db collection name (optional)`
 
  ```js
 
