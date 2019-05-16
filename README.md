@@ -25,7 +25,7 @@ npm install --save beatific
 
 ## Usage
 
-### AP
+### API
 
 ```js
 var beatific = require("beatific");
