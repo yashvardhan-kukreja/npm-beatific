@@ -16,17 +16,16 @@
 
  -------------
 
- ## Usage:
-
-### Installation:
+## Installation
 
 ```js
 npm install --save beatific
 ```
 <br>
 
+## Usage
 
-### API:
+### AP
 
 ```js
 var beatific = require("beatific");
@@ -34,7 +33,7 @@ var beatific = require("beatific");
 <br>
 
 
-### Connect to a MongoDB:
+### Connect to a MongoDB
 Parameters: MongoDB URI
 
 ```js
@@ -45,7 +44,7 @@ beatific.mongoConnect(dbURI)
 <br>
 
 
-### JWT functionality:
+### JWT functionality
 
  - Signing/Generating the token:
 
@@ -69,7 +68,7 @@ beatific.mongoConnect(dbURI)
  ```
  <br>
 
-### Bcrypt Functionality:
+### Bcrypt Functionality
 
  - Hashing some data:
 
@@ -107,7 +106,7 @@ app.use(beatific.logger(loggerType));
 <br>
 
 
-### Use helmet:
+### Use helmet
 
 ```js
 // In your main .js file
@@ -118,7 +117,7 @@ app.use(beatific.compression());
 <br>
 
 
-### Use compression:
+### Use compression
 
 ```js
 // In your main .js file
@@ -132,7 +131,7 @@ app.use(beatific.compression());
 
 ### Generate Dockerfile for the project
 
-Parameters: dockerfile_name (default="dockerfile"), portNumber, startCommand (default="npm start")
+> Parameters: `dockerfile_name (default="dockerfile"), portNumber, startCommand (default="npm start")`
 
 Just run this once in your main .js file:
 
