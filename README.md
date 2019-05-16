@@ -2,6 +2,8 @@
 [![npm version](https://badge.fury.io/js/beatific.svg)](https://badge.fury.io/js/beatific)
 [![Build Status](https://travis-ci.com/yashvardhan-kukreja/npm-beatific.svg?token=xkGWiw62FsqB4JqveXu3&branch=master)](https://travis-ci.com/yashvardhan-kukreja/npm-beatific)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://www.github.com/yashvardhan-kukreja/npm-beatific//edit/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 
 ### A single npm package which satisfies the need for the following packages:
 
@@ -33,15 +35,65 @@ var beatific = require("beatific");
 <br>
 
 
-### Connect to a MongoDB
-> `Parameters: MongoDB URI`
+### MongoDB/Mongoose Functionality:
+
+ - Connect to a MongoDB 
+
+ > `Parameters: MongoDB URI
 
 ```js
 beatific.mongoConnect(dbURI)
 .then(db => console.log("Connected to the DB..."))
     .catch(err => console.error("Error connecting to the DB!"));
 ```
-<br>
+
+ - Create a mongo schema and automatically generate a mongoose.model for it
+
+ Parameters: Schema name, schema object, db collection name (optional)
+
+ ```js
+
+ let userSchema = {
+    name: {
+       type: String,
+       required: true
+    },
+    email: {
+       type: String,
+       required: true,
+       unique: true
+    }
+ };
+
+ beatific.mongoModelGen('User', userSchema, "users")
+ .then(model => console.log("mongoose.model generated for user schema"))
+      .catch(err => console.error("Some problem occurred"));
+ ```
+
+ What this does behind the scenes
+
+ ```js
+
+const mongoose = require("mongoose");
+
+let userSchema = {
+    name: {
+       type: String,
+       required: true
+    },
+    email: {
+       type: String,
+       required: true,
+       unique: true
+    }
+ };
+
+ let schema = new mongoose.schema(userSchema);
+
+ return mongoose.model('User', schema, "users");
+
+ ```
+ <br>
 
 
 ### JWT functionality
@@ -112,7 +164,7 @@ app.use(beatific.logger(loggerType));
 // In your main .js file
 var app = express();
 
-app.use(beatific.compression());
+app.use(beatific.helmet());
 ```
 <br>
 
